@@ -1,0 +1,16 @@
+Project: food deleivery app
+Header
+    logo
+    Home
+    about
+    Cart
+Body
+    search
+    returant container
+        image
+        name
+        ratings
+        cuzine
+footer
+    copyright link
+    social media link
