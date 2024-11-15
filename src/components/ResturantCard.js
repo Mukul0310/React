@@ -4,7 +4,8 @@ import React from "react";
 const ResturantCard = (props) =>{
     const {resData} = props;
 
-    const {name,areaName,cuisines,deliveryTime,avgRating,costForTwo,cloudinaryImageId} =resData?.info;
+    const {name,areaName,cuisines,avgRating,costForTwo,cloudinaryImageId} =resData?.info;
+    const {deliveryTime} = resData.info?.sla;
     return (
         <div className="res-card">
             <img className="res-image" alt="resturant image" src={ CDN_URL + cloudinaryImageId} />
