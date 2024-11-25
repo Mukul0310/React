@@ -64,7 +64,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 .res-attri >ul>li:hover{
     overflow: visible;
@@ -77,8 +77,8 @@
 }
 
 .res-container{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -132,3 +132,9 @@
 
     text-shadow: 3px 3px 3px black;
 } */
+
+.user-card{
+    padding: 5px;
+    border: 1px solid black;
+    margin: 1px;
+}

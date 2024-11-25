@@ -3,6 +3,7 @@ import ResturantCard from "./ResturantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../Utils/useOnlineStatus";
 
 const Body = () => {
   // Local State Variable - Use State
@@ -42,6 +43,8 @@ const Body = () => {
   // if (listofresturent.length === 0) {
   //     return <Shimmer />;
   // }
+  const onlinestatus = useOnlineStatus();
+  if(onlinestatus === false) return <h1>Apna Internet Connection Check Karo!!! </h1>
 
   return Array.isArray(listofresturent) && listofresturent.length === 0 ? (
     <Shimmer />
