@@ -17,3 +17,13 @@ footer
 
 "Till Routes" : UseEffect, More abt UseSatate, React Router DOM, Link tag, Children Routes, Dynaminc Content from path
 
+"Till Lazy Loading" : Classbased Components :
+                            Passing Props in CBC - concept of Super props,
+                            State Variable,
+                            componentDidMount(),
+                            componetDidUpdate(),
+                            componentWillunmount(),
+                      Optimizing Our App,
+                      online of Line feature,
+                      Lazy Loading (Bundling,Chunking,Dynamic Bundling,on Demand loading, Dynamic loading)
+                        use of Suspense

@@ -28,14 +28,15 @@ const Body = () => {
       );
 
       const json = await data.json();
-      console.log(json);
+      
       setListofresturent(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setfilteredresturant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      console.log(json);
     } catch {
-      console.error("Error Fetching Data:", error);
+      console.error("Error Fetching Data:");
     }
   };
 
@@ -49,22 +50,23 @@ const Body = () => {
   return Array.isArray(listofresturent) && listofresturent.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter-btn">
+    <div className="body p-4">
+      <div className="flex items-center ">
         <div className="search">
-          <input type="text" className="search-btn" value={searchtext} 
+          <input type="text" className="border-2 border-black rounded-lg" value={searchtext} 
           onChange={(e) =>
             setsearchtext(e.target.value)
           } />
-          <button onClick={() => {
+          <button className="m-1 px-2 py-1 bg-blue-50 rounded-lg " onClick={() => {
             console.log(searchtext)
             const filteredresult = listofresturent.filter((res)=> 
             res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
             setfilteredresturant(filteredresult);
           }}>Search</button>
         </div>
+        <div>
         <button
-          className="btn"
+          className="m-4 px-2 py-1 bg-blue-50 rounded-lg"
           onClick={() => {
             const filteredList = listofresturent.filter(
               (res) => res.info.avgRating >= 4.5
@@ -74,13 +76,15 @@ const Body = () => {
         >
           Top Rated Resturant
         </button>
+        </div>
+        
       </div>
-      <div className="res-container">
-        {filteredresturant.map((resturant) => (
+        <div className="flex flex-wrap">
+        {filteredresturant.map((restaurants) => (
         <Link 
-          key={resturant.info.id} 
-          to={"/restaurant/" + resturant.info.id }>
-             <ResturantCard  resData={resturant} /> 
+          key={restaurants.info.id} 
+          to={"/restaurant/" + restaurants.info.id }>
+             <ResturantCard  resData={restaurants} /> 
         </Link> 
         ))}
       </div>
