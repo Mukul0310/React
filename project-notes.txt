@@ -27,3 +27,10 @@ footer
                       online of Line feature,
                       Lazy Loading (Bundling,Chunking,Dynamic Bundling,on Demand loading, Dynamic loading)
                         use of Suspense
+
+"Till context" : Adding Tailwind to our App
+                Higher order Components
+                Building Accordian
+                Lifting State Up 
+                Props Drilling
+                React context (a Global space)
