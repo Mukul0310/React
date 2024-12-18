@@ -34,3 +34,12 @@ footer
                 Lifting State Up 
                 Props Drilling
                 React context (a Global space)
+
+# Redux Toolkit:
+                Install @reduxjs/toolkit and react-redux
+                Built our redux Store
+                Connect our Store to our app
+                Slice(Cart Slice)
+                dispatch (action)
+                Selector
+
